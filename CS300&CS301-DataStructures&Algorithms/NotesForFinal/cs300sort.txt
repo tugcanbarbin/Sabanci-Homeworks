@@ -1,0 +1,23 @@
+O(N) complexity of insertion sort best case
+O(N'2) worstcase
+O(N+I) I = number of inversions
+
+shellsort uzak elemanları değiştir falan filan
+1,2,4 sequence of increments 
+O(N^2)
+hibbards increments
+sequence 1,3,7,15 
+O(N^3/2)worst
+O(N^5/4)average
+sedgwick O(N^4/3) worst
+
+
+complexity of merge O(N)
+mergesort O(NlogN) minimum lowerbound
+O(NlogN) minimum lowerbound comparison based sort
+quicksort O(N^2)
+quickselect worst o(N^2)
+average O(N)
+
+//biletlerini ortalama ne kadar once almislar 
+SELECT date_dif.account_id, AVG(date_dif.date_diff) AS avgs FROM account, date_dif GROUP BY date_dif.account_id

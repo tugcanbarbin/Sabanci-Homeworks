@@ -1,0 +1,590 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: tel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tel.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tel"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-tq144
+
+---- Source Options
+Top Module Name                    : tel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "deneme222.v" in library work
+Module <tel> compiled
+No errors in compilation
+Analysis of file <"tel.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <tel> in library <work> with parameters.
+	calleesturn = "100"
+	callersturn = "011"
+	costturn = "101"
+	idle = "000"
+	rejected = "010"
+	ringing = "001"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <tel>.
+	calleesturn = 3'b100
+	callersturn = 3'b011
+	costturn = 3'b101
+	idle = 3'b000
+	rejected = 3'b010
+	ringing = 3'b001
+Module <tel> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <statusMsg<7>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<4>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<3>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<1>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<0>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<15>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<12>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<11>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<23>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<31>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<28>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<39>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<38>> in unit <tel> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<37>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<34>> in unit <tel> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<47>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<46>> in unit <tel> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<45>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<55>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<54>> in unit <tel> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<53>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<52>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<63>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<62>> in unit <tel> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<61>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <statusMsg<58>> in unit <tel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <tel>.
+    Related source file is "deneme222.v".
+    Register <statusMsg<14>> equivalent to <statusMsg<10>> has been removed
+    Register <statusMsg<60>> equivalent to <statusMsg<10>> has been removed
+    Register <statusMsg<8>> equivalent to <statusMsg<10>> has been removed
+    Register <statusMsg<56>> equivalent to <statusMsg<13>> has been removed
+    Register <statusMsg<27>> equivalent to <statusMsg<19>> has been removed
+    Register <statusMsg<33>> equivalent to <statusMsg<19>> has been removed
+    Register <statusMsg<9>> equivalent to <statusMsg<19>> has been removed
+    Register <statusMsg<29>> equivalent to <statusMsg<21>> has been removed
+    Register <statusMsg<24>> equivalent to <statusMsg<22>> has been removed
+    Register <statusMsg<30>> equivalent to <statusMsg<22>> has been removed
+    Register <statusMsg<2>> equivalent to <statusMsg<25>> has been removed
+    Register <statusMsg<6>> equivalent to <statusMsg<25>> has been removed
+    Register <statusMsg<35>> equivalent to <statusMsg<26>> has been removed
+    Register <statusMsg<40>> equivalent to <statusMsg<36>> has been removed
+    Register <statusMsg<44>> equivalent to <statusMsg<36>> has been removed
+    Register <statusMsg<49>> equivalent to <statusMsg<36>> has been removed
+    Register <statusMsg<57>> equivalent to <statusMsg<48>> has been removed
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 73 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <current_state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 4-bit register for signal <counter>.
+    Found 64-bit register for signal <sentMsg>.
+    Found 1-bit register for signal <statusMsg<59>>.
+    Found 2-bit register for signal <statusMsg<51:50>>.
+    Found 1-bit register for signal <statusMsg<48>>.
+    Found 3-bit register for signal <statusMsg<43:41>>.
+    Found 1-bit register for signal <statusMsg<36>>.
+    Found 1-bit register for signal <statusMsg<32>>.
+    Found 2-bit register for signal <statusMsg<26:25>>.
+    Found 7-bit register for signal <statusMsg<22:16>>.
+    Found 1-bit register for signal <statusMsg<13>>.
+    Found 1-bit register for signal <statusMsg<10>>.
+    Found 1-bit register for signal <statusMsg<5>>.
+    Found 32-bit register for signal <cost>.
+    Found 8-bit comparator greater for signal <cost$cmp_gt0000> created at line 244.
+    Found 8-bit comparator less for signal <cost$cmp_lt0000> created at line 244.
+    Found 32-bit adder for signal <cost$share0000>.
+    Found 4-bit adder for signal <counter$addsub0000>.
+    Found 6-bit register for signal <current_state>.
+    Found 8-bit comparator greater for signal <sentMsg_7$cmp_gt0000> created at line 242.
+    Found 8-bit comparator less for signal <sentMsg_7$cmp_lt0000> created at line 242.
+    Summary:
+	inferred 121 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <tel> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 88
+ 1-bit register                                        : 85
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+ 6-bit register                                        : 1
+# Comparators                                          : 4
+ 8-bit comparator greater                              : 2
+ 8-bit comparator less                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 127
+ Flip-Flops                                            : 127
+# Comparators                                          : 4
+ 8-bit comparator greater                              : 2
+ 8-bit comparator less                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <tel> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block tel, actual ratio is 12.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 127
+ Flip-Flops                                            : 127
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : tel.ngr
+Top Level Output File Name         : tel
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 148
+
+Cell Usage :
+# BELS                             : 292
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 30
+#      LUT2                        : 12
+#      LUT2_D                      : 2
+#      LUT3                        : 39
+#      LUT3_D                      : 1
+#      LUT3_L                      : 3
+#      LUT4                        : 99
+#      LUT4_D                      : 7
+#      LUT4_L                      : 32
+#      MUXCY                       : 31
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 127
+#      FDC                         : 78
+#      FDE                         : 32
+#      FDP                         : 17
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 147
+#      IBUF                        : 15
+#      OBUF                        : 132
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100etq144-4 
+
+ Number of Slices:                      120  out of    960    12%  
+ Number of Slice Flip Flops:            127  out of   1920     6%  
+ Number of 4 input LUTs:                226  out of   1920    11%  
+ Number of IOs:                         148
+ Number of bonded IOBs:                 148  out of    108   137% (*) 
+ Number of GCLKs:                         1  out of     24     4%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 127   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 95    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.979ns (Maximum Frequency: 143.287MHz)
+   Minimum input arrival time before clock: 10.282ns
+   Maximum output required time after clock: 4.571ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.979ns (frequency: 143.287MHz)
+  Total number of paths / destination ports: 1583 / 127
+-------------------------------------------------------------------------
+Delay:               6.979ns (Levels of Logic = 4)
+  Source:            current_state_3 (FF)
+  Destination:       cost_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: current_state_3 to cost_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             16   0.591   1.209  current_state_3 (current_state_3)
+     LUT2:I0->O            3   0.704   0.535  statusMsg_26_mux00001 (statusMsg_26_mux0000)
+     LUT4_D:I3->O          1   0.704   0.499  sentMsg_0_mux000011_1 (sentMsg_0_mux000011)
+     LUT2_D:I1->O         15   0.704   1.021  cost_mux0000<0>11_1 (cost_mux0000<0>11)
+     LUT4:I3->O            1   0.704   0.000  cost_mux0000<1>1 (cost_mux0000<1>)
+     FDE:D                     0.308          cost_1
+    ----------------------------------------
+    Total                      6.979ns (3.715ns logic, 3.264ns route)
+                                       (53.2% logic, 46.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 3920 / 138
+-------------------------------------------------------------------------
+Offset:              10.282ns (Levels of Logic = 38)
+  Source:            charSent<0> (PAD)
+  Destination:       cost_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: charSent<0> to cost_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.706  charSent_0_IBUF (charSent_0_IBUF)
+     LUT4:I0->O            1   0.704   0.000  sentMsg_7_and000053_SW01 (sentMsg_7_and000053_SW0)
+     MUXF5:I1->O           1   0.321   0.424  sentMsg_7_and000053_SW0_f5 (N114)
+     LUT4:I3->O           12   0.704   0.996  sentMsg_7_and000053 (sentMsg_7_and0000)
+     LUT4:I2->O            1   0.704   0.000  Madd_cost_share0000_lut<0> (Madd_cost_share0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd_cost_share0000_cy<0> (Madd_cost_share0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<1> (Madd_cost_share0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<2> (Madd_cost_share0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<3> (Madd_cost_share0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<4> (Madd_cost_share0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<5> (Madd_cost_share0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<6> (Madd_cost_share0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<7> (Madd_cost_share0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<8> (Madd_cost_share0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<9> (Madd_cost_share0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<10> (Madd_cost_share0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<11> (Madd_cost_share0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<12> (Madd_cost_share0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<13> (Madd_cost_share0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<14> (Madd_cost_share0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<15> (Madd_cost_share0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<16> (Madd_cost_share0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<17> (Madd_cost_share0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<18> (Madd_cost_share0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<19> (Madd_cost_share0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<20> (Madd_cost_share0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<21> (Madd_cost_share0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<22> (Madd_cost_share0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<23> (Madd_cost_share0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<24> (Madd_cost_share0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<25> (Madd_cost_share0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<26> (Madd_cost_share0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<27> (Madd_cost_share0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<28> (Madd_cost_share0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_cost_share0000_cy<29> (Madd_cost_share0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd_cost_share0000_cy<30> (Madd_cost_share0000_cy<30>)
+     XORCY:CI->O           1   0.804   0.455  Madd_cost_share0000_xor<31> (cost_share0000<31>)
+     LUT4:I2->O            1   0.704   0.000  cost_mux0000<31>1 (cost_mux0000<31>)
+     FDE:D                     0.308          cost_31
+    ----------------------------------------
+    Total                     10.282ns (7.701ns logic, 2.581ns route)
+                                       (74.9% logic, 25.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 106 / 106
+-------------------------------------------------------------------------
+Offset:              4.571ns (Levels of Logic = 1)
+  Source:            counter_0 (FF)
+  Destination:       counter<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: counter_0 to counter<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.591   0.708  counter_0 (counter_0)
+     OBUF:I->O                 3.272          counter_0_OBUF (counter<0>)
+    ----------------------------------------
+    Total                      4.571ns (3.863ns logic, 0.708ns route)
+                                       (84.5% logic, 15.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.61 secs
+ 
+--> 
+
+Total memory usage is 4513568 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :   49 (   0 filtered)
+

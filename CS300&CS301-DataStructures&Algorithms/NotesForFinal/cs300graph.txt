@@ -1,0 +1,42 @@
+if the pair of vertices in an edge is ordered --- directed graph(digraph)
+a cycle in a directed graph is a path of length at least 1 such that w1 = wn
+a cycle in an undirected graph has all edges distinct
+
+undirected graph path from ecery to every - connected
+directed one --- strongly connected
+
+degree of vertex ---- number of edges
+in degree of vertex --- number of edges that comes
+out degree of vertex --- number of edges that goes
+
+for directed graphs there can be at most ---- V * V-1 edges
+if D is close to 1 then E = O(V^2) -- dense
+if D is small E= O(V) -- sparse
+
+
+total memory for adjacency list representation is------ O(V+E) linear
+
+topological sort is an ordering of vertices in a directed acyclic graph (DAG) -- O(V^2) if graph is dense
+--- O(V+E) if graph is sparse
+
+
+
+
+
+
+
+We define the DENSİTY of a graph G as D=|E| / M, where M is the maximum number of possible edges in G.
+For UNDİRECTED GRAPHS, there can be at most M=|V|(|V|-1)/2 edges.
+For DİAGRAPHS there can be at most M=|V|(|V|-1) edges.
+If D is close to 1, that is,|E| = O(|V|2) then the graph is dense.
+If D is  small, that is |E| = O(|V|), then the graph is sparse.
+The adjacency matrix representation uses O(|V|2) space.
+You can easily check if an edge exists or not in O(1) time.
+Total memory for adjacency lists is O(|E|)
+Total memory for array of pointers is O(|V|)
+Total memory for adjacency list representation is  O(|V|+|E|) which is linear in the size of the graph.
+TOPOLOGY SORT
+This function takes O(|V|) time. Since there are |V| calls, total time is O(|V|2) 0 İNDEGREE VERTİCLES
+(O(|V|+|E|) if indegrees are computed) TOTAL TİME
+SHORTEST PATH
+The cost of a path v1,v2,v3,...,vN is TOPLAM İŞARETİ     this is called as the weighted path length

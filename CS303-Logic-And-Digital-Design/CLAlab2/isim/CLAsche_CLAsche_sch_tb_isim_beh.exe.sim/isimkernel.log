@@ -1,0 +1,29 @@
+Command line:
+   CLAsche_CLAsche_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  33070
+
+Wed Dec 02 14:22:20 2020
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 5149.92 Meg
+
+ Total Signals          : 565
+ Total Nets             : 149
+ Total Signal Drivers   : 141
+ Total Blocks           : 113
+ Total Primitive Blocks : 106
+ Total Processes        : 143
+ Total Traceable Variables  : 49
+ Total Scalar Nets and Variables : 260
+Total Line Count : 142
+
+ Total Simulation Time: 0.359375 sec
+
+ Current Memory Usage: 4992.63 Meg
+
+Wed Dec 02 14:32:30 2020
+

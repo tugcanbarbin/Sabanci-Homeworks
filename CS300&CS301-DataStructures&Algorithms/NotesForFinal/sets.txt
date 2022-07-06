@@ -1,0 +1,26 @@
+class disjSets
+{
+public:
+	explicit disjSets(int NumElements);
+	int find(int x) const;
+	void unionSets(int root1,int root2);
+private:
+	vector <int> s;
+};
+disjSets::disjSets(int num): s(num)
+{
+	for(int i = 0; i<s.size();i++)
+		s[i] = -1;
+}
+unionSets
+{
+	s[root2]=root1;
+}
+find(x) 
+{
+if sx <0
+return x
+else
+return find(sx);
+}
+logN find worst case when do not implied by size by height O(N)

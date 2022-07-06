@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Xilinx/TugcanBarbin_25168_lab2/CLAlab2/CLAsche_CLAsche_sch_tb_isim_beh.exe" -prj "C:/Xilinx/TugcanBarbin_25168_lab2/CLAlab2/CLAsche_CLAsche_sch_tb_beh.prj" "work.CLAsche_CLAsche_sch_tb" "work.glbl" 

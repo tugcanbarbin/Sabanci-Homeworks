@@ -1,0 +1,161 @@
+#include <vector>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <fstream>
+using namespace std;
+struct node
+{
+	int month,year;
+	vector <string> cardNo;
+	node * next;
+};
+void add2End (node * tail,int month,int year,string cardNo);
+bool bigger(node * head,int month,int year);
+node* addOrdered(node * head , int month, int year ,string cardNo);
+int main()
+{
+	string filename;
+	fstream file;
+	bool failed=false;
+	do
+	{
+		cout << "Please enter file name: ";
+		cin >> filename;
+		file.open(filename);
+		if(file.fail())
+		{
+			cout <<"Cannot find a file named "<< filename << endl;
+			failed = true;
+			file.clear();
+		}
+		else 
+			failed = false;
+	}while(failed);
+	node * head = new node;
+	string gettingLines;
+
+	
+	getline(file,gettingLines);
+	string cardNumber;
+	int M,Y;
+	stringstream lineToWords(gettingLines);
+	lineToWords >> cardNumber >> M >> Y;
+	head->cardNo.push_back(cardNumber);
+	head ->month = M;
+	head ->year = Y;
+	head ->next = NULL;
+	cout << "New node is created with expiration date: " << M << " " << Y << endl;
+	while(getline(file,gettingLines))
+	{
+		stringstream lineToWords(gettingLines);
+		lineToWords >> cardNumber >> M >> Y;
+		node* ptr = new node;
+		ptr = head;
+		bool isNew= true;
+		while(ptr != NULL)
+		{
+			if (ptr->month == M && ptr ->year==Y)
+			{
+				ptr ->cardNo.push_back(cardNumber);
+				isNew = false;
+				break;
+			}
+			else
+				ptr = ptr ->next;
+		}
+		if(ptr == NULL && isNew)
+		{
+			head = addOrdered(head,M,Y,cardNumber);
+		}
+	}/////////////////////////////////////////////////////////////////7
+	node * tempForCout = head;
+	bool notNull = true;
+	while (notNull)
+	{
+		cout << tempForCout ->month << " "<< tempForCout->year << " FOR THIS DATE " << endl;
+		int size = tempForCout ->cardNo.size();
+		for (int i = 0 ; i< size; i ++)
+		{
+			cout << tempForCout ->cardNo[i] << endl;
+		}
+		if(tempForCout -> next != NULL)
+			tempForCout = tempForCout -> next;
+		else
+			notNull = false;
+	}
+
+	return 0;
+
+}
+void add2End (node * tail,int month,int year,string cardNo)
+{
+	tail ->next = new node;
+	tail ->next->month=month;
+	tail ->next->year = year;
+	tail ->next->cardNo.push_back(cardNo);
+	tail -> next-> next = NULL;
+	cout << "New node is created with expiration date: " << month << " " << year << endl;
+}
+bool bigger(node * head,int month,int year)// false means new exp. date is smaller than current given node// true means bigger
+{
+	node * temp = head;
+	if(temp ->year < year)
+	{
+		return true;
+	}
+	if (temp -> year == year)
+	{
+		if(temp -> month < month )
+			return true;
+		else if(temp -> month > month)
+			return false;
+	}
+	if (temp -> year > year)
+		return false;
+}
+node * addOrdered(node * head , int month, int year ,string cardNo)
+{	
+	node* temp2= new node;
+	temp2 = head;
+	bool isNULL = false, isBigger;
+	isBigger = bigger(temp2,month,year);
+	while(isBigger)
+	{
+		if(temp2-> next != NULL)
+		{
+			node * tempNext = temp2 -> next;
+			if((bigger(tempNext,month,year)))
+			{
+				temp2 = temp2-> next;
+				isBigger = true;
+			}
+			else
+			{
+				isBigger=false;
+				node* newNodeBetween = new node;
+				newNodeBetween-> next = temp2-> next;
+				newNodeBetween->cardNo.push_back(cardNo);
+				newNodeBetween->month = month;
+				newNodeBetween-> year = year;
+				temp2-> next = newNodeBetween;
+			}
+
+		}
+		else if (temp2-> next == NULL)
+		{
+			add2End(temp2,month,year,cardNo);
+			return head;
+		}
+	}
+	if(!isBigger)
+	{
+		temp2 = head;
+		node * newHead = new node;
+		newHead -> cardNo.push_back(cardNo);
+		newHead -> month = month;
+		newHead -> year = year;
+		newHead -> next = temp2;
+		head = newHead;
+	}
+}

@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Xilinx/14.7/ISE_DS/projects/CLAlab2/CLAsche.xst" -ofn "C:/Xilinx/14.7/ISE_DS/projects/CLAlab2/CLAsche.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-tq144-4 CLAsche.ngc CLAsche.ngd  
+map -intstyle ise -p xc3s100e-tq144-4 -cm area -ir off -pr off -c 100 -o CLAsche_map.ncd CLAsche.ngd CLAsche.pcf 
+par -w -intstyle ise -ol high -t 1 CLAsche_map.ncd CLAsche.ncd CLAsche.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CLAsche.twx CLAsche.ncd -o CLAsche.twr CLAsche.pcf 

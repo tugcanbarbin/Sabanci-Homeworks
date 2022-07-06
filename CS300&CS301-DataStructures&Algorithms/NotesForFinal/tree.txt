@@ -1,0 +1,102 @@
+//////////////////////////////TO SEE İF THE THREE İS BALANCED in binary search tree to AVL TREE
+int maxDepth(TreeNode * root)
+{
+	if(root == NULL)
+	{
+		return 0;
+	}
+	return (1+ max(maxDepth(root->left),maxDepth(root->right)));
+}
+bool isBalanced(TreeNode* root)
+{
+	return (maxDepth(root)-minDepth(root)<=1)
+}
+
+/////////////////////////////////// TO MAKE A THREE WİTH A SORTED ARRAY
+struct TreeNode
+{
+	TreeNode * Left;
+	TreeNode * Right;
+	int data;
+}
+Tree * addToTree(int arr[],int start, int end)
+{
+	if (end < start) return NULL;
+	
+	int mid = (start+end)/2;
+	TreeNode * n = new TreeNode;
+	n->data = arr[mid];
+	n->left = addToTree(arr,start,mid-1);
+	n->right = addToTree(arr,mid+1,end);
+	return n;
+}
+TreeNode * createMinimalBST(int arr[], int len)
+{
+	return addToTree(arr,0,len-1);
+}
+
+
+//////////////////////////////////// PRINT BİNARY SEARRCH TREE(sorted left to right) İN İNCREASİNG ORDER İN ORDER TRAVERSAL
+struct TreeNode
+{
+	TreeNode * Left;
+	TreeNode * Right;
+	int data;
+}
+void printTree(TreeNode * node) ////left middle right(inorder) ////left right middle(post)/// root left right(pre order)
+{
+	if(node == NULL)
+		return;
+	printTree(node->left);
+	cout << node->data << " ";
+	printTree(node->right);
+}
+//////////////////////////////////////////////////to find successor left most child of right subtree
+TreeNode* inOrderSuccessor(TreeNode * e)
+{
+	if(e!=NULL)
+	{
+		TreeNode* p;
+		if(e->right != NULL)
+			p = leftMostChild(e->right);
+		else
+		{
+			while(e->parent != NULL)
+			{
+				p = e->parent;
+				if(p->left == e)
+					break;
+				e = p;
+			}
+		}
+		return p;
+	}
+	return NULL;
+}
+TreeNode * leftMostChild(TreeNode * e)
+{
+	if(e == NULL)
+		return NULL;
+	while(e->left != NULL)
+		e = e->left;
+	return e;
+}
+
+
+///////////////////////////////////////////	COMMON ANCESTORS
+bool covers(TreeNode * root, TreeNode * p)
+{
+	if(root== NULL)
+		return false;
+	if(root == p)
+		return true;
+	return(covers(root->left,p)|| cover(root->right,p))
+}
+TreeNode * commonAncestor(TreeNode * root, TreeNode p, TreeNode * q)
+{
+	if(covers(root->left,p) && covers(root->left,q))
+		return commonAncestor(root->left,p,q);
+	if(covers(root->right,p) && covers(root->right,q))
+		return commonAncestor(root->right,p,q);
+	return root;
+}

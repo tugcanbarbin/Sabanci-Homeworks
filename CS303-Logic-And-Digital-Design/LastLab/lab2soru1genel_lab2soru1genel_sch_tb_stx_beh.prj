@@ -1,0 +1,4 @@
+verilog isim_temp "symbolFA32.vf"
+verilog isim_temp "lab2soru1genel.vf"
+verilog isim_temp "deneme2.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

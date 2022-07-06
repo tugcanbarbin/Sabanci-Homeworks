@@ -1,0 +1,30 @@
+full addder
+
+module FullAdder (A, B, Cin, Sum, Carry);
+	input A, B, Cin;
+	output Sum, Carry;
+	assign Carry = (A & B) | (A & Cin) | (B & Cin);
+	assign Sum = A ^ B ^ Cin;
+endmodule
+
+3 bit rca bus
+module RCA3 (A, B, Cin, Sum, Carry);//3-bit Ripple Carry Adder
+	input [2:0] A, B;
+	input Cin;
+	output [2:0] Sum
+	output Carry;
+	wire [1:0] C;
+
+	Full_Adder FA0 (A[0], B[0], Cin, Sum[0], C[0]);
+	Full_Adder FA1 (.A(A[1]), .B(B[1]), .Cin(C[0]), .Sum(Sum[1]),
+	.Carry(C[1]));
+	Full_Adder FA2 (.Sum(Sum[2]), .B(B[2]), .Cin(C[1]),
+	.Carry(Carry), .A(A[2]));
+endmodule
+
+
+recit 4 sonu raporlara bakmak
+recit 5 ödev anlatımı
+
+
+

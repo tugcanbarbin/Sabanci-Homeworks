@@ -1,0 +1,5 @@
+set -tmpdir "C:/Xilinx/TugcanBarbin_25168_lab2/CLA/xst/projnav.tmp"
+set -xsthdpdir "C:/Xilinx/TugcanBarbin_25168_lab2/CLA/xst"
+elaborate
+-ifn CLA5.prj
+-ifmt mixed

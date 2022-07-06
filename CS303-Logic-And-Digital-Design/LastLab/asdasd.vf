@@ -1,0 +1,303 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : asdasd.vf
+// /___/   /\     Timestamp : 12/02/2020 00:47:03
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Xilinx/14.7/ISE_DS/projects/nolurbit/asdasd.vf -w C:/Xilinx/14.7/ISE_DS/projects/nolurbit/asdasd.sch
+//Design Name: asdasd
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FAs_MUSER_asdasd(A, 
+                        B, 
+                        Cin, 
+                        C, 
+                        S);
+
+    input A;
+    input B;
+    input Cin;
+   output C;
+   output S;
+   
+   wire XLXN_1;
+   wire XLXN_5;
+   wire XLXN_6;
+   
+   XOR2  XLXI_1 (.I0(B), 
+                .I1(A), 
+                .O(XLXN_1));
+   XOR2  XLXI_2 (.I0(Cin), 
+                .I1(XLXN_1), 
+                .O(S));
+   AND2  XLXI_3 (.I0(Cin), 
+                .I1(XLXN_1), 
+                .O(XLXN_6));
+   AND2  XLXI_4 (.I0(A), 
+                .I1(B), 
+                .O(XLXN_5));
+   OR2  XLXI_5 (.I0(XLXN_5), 
+               .I1(XLXN_6), 
+               .O(C));
+endmodule
+`timescale 1ns / 1ps
+
+module asdasd(ADDSUB, 
+              A0, 
+              A1, 
+              A2, 
+              A3, 
+              A4, 
+              A5, 
+              A6, 
+              A7, 
+              A8, 
+              A9, 
+              A10, 
+              A11, 
+              A12, 
+              A13, 
+              A14, 
+              B0, 
+              B1, 
+              B2, 
+              B3, 
+              B4, 
+              B5, 
+              B6, 
+              B7, 
+              B8, 
+              B9, 
+              B10, 
+              B11, 
+              B12, 
+              B13, 
+              B14, 
+              C0, 
+              C1, 
+              C2, 
+              C3, 
+              C4, 
+              C5, 
+              C6, 
+              C7, 
+              C8, 
+              C9, 
+              C10, 
+              C11, 
+              C12, 
+              C13, 
+              C14, 
+              OVF);
+
+    input ADDSUB;
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input A4;
+    input A5;
+    input A6;
+    input A7;
+    input A8;
+    input A9;
+    input A10;
+    input A11;
+    input A12;
+    input A13;
+    input A14;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+    input B4;
+    input B5;
+    input B6;
+    input B7;
+    input B8;
+    input B9;
+    input B10;
+    input B11;
+    input B12;
+    input B13;
+    input B14;
+   output C0;
+   output C1;
+   output C2;
+   output C3;
+   output C4;
+   output C5;
+   output C6;
+   output C7;
+   output C8;
+   output C9;
+   output C10;
+   output C11;
+   output C12;
+   output C13;
+   output C14;
+   output OVF;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_17;
+   wire XLXN_24;
+   wire XLXN_30;
+   wire XLXN_64;
+   wire XLXN_66;
+   wire XLXN_68;
+   wire XLXN_70;
+   wire XLXN_81;
+   wire XLXN_83;
+   wire XLXN_85;
+   wire XLXN_89;
+   wire XLXN_91;
+   wire XLXN_93;
+   wire XLXN_96;
+   wire XLXN_98;
+   wire XLXN_101;
+   
+   XOR2  XLXI_6 (.I0(ADDSUB), 
+                .I1(B0), 
+                .O(XLXN_1));
+   XOR2  XLXI_7 (.I0(ADDSUB), 
+                .I1(B1), 
+                .O(XLXN_2));
+   XOR2  XLXI_8 (.I0(ADDSUB), 
+                .I1(B2), 
+                .O(XLXN_3));
+   XOR2  XLXI_9 (.I0(ADDSUB), 
+                .I1(B3), 
+                .O(XLXN_14));
+   XOR2  XLXI_10 (.I0(ADDSUB), 
+                 .I1(B4), 
+                 .O(XLXN_5));
+   XOR2  XLXI_11 (.I0(ADDSUB), 
+                 .I1(B5), 
+                 .O(XLXN_6));
+   XOR2  XLXI_12 (.I0(ADDSUB), 
+                 .I1(B6), 
+                 .O(XLXN_17));
+   XOR2  XLXI_13 (.I0(ADDSUB), 
+                 .I1(B13), 
+                 .O(XLXN_9));
+   XOR2  XLXI_14 (.I0(ADDSUB), 
+                 .I1(B12), 
+                 .O(XLXN_10));
+   XOR2  XLXI_15 (.I0(ADDSUB), 
+                 .I1(B11), 
+                 .O(XLXN_11));
+   XOR2  XLXI_16 (.I0(ADDSUB), 
+                 .I1(B10), 
+                 .O(XLXN_12));
+   XOR2  XLXI_17 (.I0(ADDSUB), 
+                 .I1(B9), 
+                 .O(XLXN_13));
+   XOR2  XLXI_18 (.I0(ADDSUB), 
+                 .I1(B8), 
+                 .O(XLXN_24));
+   XOR2  XLXI_19 (.I0(ADDSUB), 
+                 .I1(B7), 
+                 .O(XLXN_15));
+   XOR2  XLXI_64 (.I0(ADDSUB), 
+                 .I1(B14), 
+                 .O(XLXN_8));
+   FAs_MUSER_asdasd  XLXI_82 (.A(A6), 
+                             .B(XLXN_17), 
+                             .Cin(XLXN_30), 
+                             .C(XLXN_83), 
+                             .S(C6));
+   FAs_MUSER_asdasd  XLXI_84 (.A(A5), 
+                             .B(XLXN_6), 
+                             .Cin(XLXN_81), 
+                             .C(XLXN_30), 
+                             .S(C5));
+   FAs_MUSER_asdasd  XLXI_85 (.A(A4), 
+                             .B(XLXN_5), 
+                             .Cin(XLXN_70), 
+                             .C(XLXN_81), 
+                             .S(C4));
+   FAs_MUSER_asdasd  XLXI_86 (.A(A3), 
+                             .B(XLXN_14), 
+                             .Cin(XLXN_68), 
+                             .C(XLXN_70), 
+                             .S(C3));
+   FAs_MUSER_asdasd  XLXI_87 (.A(A2), 
+                             .B(XLXN_3), 
+                             .Cin(XLXN_66), 
+                             .C(XLXN_68), 
+                             .S(C2));
+   FAs_MUSER_asdasd  XLXI_89 (.A(A1), 
+                             .B(XLXN_2), 
+                             .Cin(XLXN_64), 
+                             .C(XLXN_66), 
+                             .S(C1));
+   FAs_MUSER_asdasd  XLXI_92 (.A(A0), 
+                             .B(XLXN_1), 
+                             .Cin(ADDSUB), 
+                             .C(XLXN_64), 
+                             .S(C0));
+   FAs_MUSER_asdasd  XLXI_93 (.A(A7), 
+                             .B(XLXN_15), 
+                             .Cin(XLXN_83), 
+                             .C(XLXN_85), 
+                             .S(C7));
+   FAs_MUSER_asdasd  XLXI_95 (.A(A8), 
+                             .B(XLXN_24), 
+                             .Cin(XLXN_85), 
+                             .C(XLXN_89), 
+                             .S(C8));
+   FAs_MUSER_asdasd  XLXI_96 (.A(A9), 
+                             .B(XLXN_13), 
+                             .Cin(XLXN_89), 
+                             .C(XLXN_91), 
+                             .S(C9));
+   FAs_MUSER_asdasd  XLXI_97 (.A(A10), 
+                             .B(XLXN_12), 
+                             .Cin(XLXN_91), 
+                             .C(XLXN_93), 
+                             .S(C10));
+   FAs_MUSER_asdasd  XLXI_98 (.A(A11), 
+                             .B(XLXN_11), 
+                             .Cin(XLXN_93), 
+                             .C(XLXN_96), 
+                             .S(C11));
+   FAs_MUSER_asdasd  XLXI_99 (.A(A12), 
+                             .B(XLXN_10), 
+                             .Cin(XLXN_96), 
+                             .C(XLXN_98), 
+                             .S(C12));
+   FAs_MUSER_asdasd  XLXI_100 (.A(A13), 
+                              .B(XLXN_9), 
+                              .Cin(XLXN_98), 
+                              .C(XLXN_101), 
+                              .S(C13));
+   FAs_MUSER_asdasd  XLXI_101 (.A(A14), 
+                              .B(XLXN_8), 
+                              .Cin(XLXN_101), 
+                              .C(OVF), 
+                              .S(C14));
+endmodule

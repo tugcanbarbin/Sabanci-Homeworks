@@ -1,0 +1,302 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : lab2soru1genel.vf
+// /___/   /\     Timestamp : 12/01/2020 19:54:24
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Xilinx/14.7/ISE_DS/projects/nolurbit/lab2soru1genel.vf -w C:/Xilinx/14.7/ISE_DS/projects/nolurbit/lab2soru1genel.sch
+//Design Name: lab2soru1genel
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module symbolFA32_MUSER_lab2soru1genel(A, 
+                                       B, 
+                                       Cin, 
+                                       C, 
+                                       S);
+
+    input A;
+    input B;
+    input Cin;
+   output C;
+   output S;
+   
+   wire XLXN_1;
+   wire XLXN_5;
+   wire XLXN_6;
+   
+   XOR2  XLXI_1 (.I0(B), 
+                .I1(A), 
+                .O(XLXN_1));
+   XOR2  XLXI_2 (.I0(Cin), 
+                .I1(XLXN_1), 
+                .O(S));
+   AND2  XLXI_3 (.I0(Cin), 
+                .I1(XLXN_1), 
+                .O(XLXN_6));
+   AND2  XLXI_4 (.I0(A), 
+                .I1(B), 
+                .O(XLXN_5));
+   OR2  XLXI_5 (.I0(XLXN_5), 
+               .I1(XLXN_6), 
+               .O(C));
+endmodule
+`timescale 1ns / 1ps
+
+module lab2soru1genel(ADDSUB, 
+                      A0, 
+                      A1, 
+                      A2, 
+                      A3, 
+                      A4, 
+                      A5, 
+                      A6, 
+                      A7, 
+                      A8, 
+                      A9, 
+                      A10, 
+                      A11, 
+                      A12, 
+                      A13, 
+                      A14, 
+                      B0, 
+                      B1, 
+                      B2, 
+                      B3, 
+                      B4, 
+                      B5, 
+                      B6, 
+                      B7, 
+                      B8, 
+                      B9, 
+                      B10, 
+                      B11, 
+                      B12, 
+                      B13, 
+                      B14, 
+                      C0, 
+                      C1, 
+                      C2, 
+                      C3, 
+                      C4, 
+                      C5, 
+                      C6, 
+                      C7, 
+                      C8, 
+                      C9, 
+                      C10, 
+                      C11, 
+                      C12, 
+                      C13, 
+                      C14, 
+                      OVF);
+
+    input ADDSUB;
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input A4;
+    input A5;
+    input A6;
+    input A7;
+    input A8;
+    input A9;
+    input A10;
+    input A11;
+    input A12;
+    input A13;
+    input A14;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+    input B4;
+    input B5;
+    input B6;
+    input B7;
+    input B8;
+    input B9;
+    input B10;
+    input B11;
+    input B12;
+    input B13;
+    input B14;
+   output C0;
+   output C1;
+   output C2;
+   output C3;
+   output C4;
+   output C5;
+   output C6;
+   output C7;
+   output C8;
+   output C9;
+   output C10;
+   output C11;
+   output C12;
+   output C13;
+   output C14;
+   output OVF;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_33;
+   wire XLXN_67;
+   wire XLXN_70;
+   wire XLXN_71;
+   wire XLXN_72;
+   wire XLXN_73;
+   wire XLXN_75;
+   wire XLXN_76;
+   wire XLXN_77;
+   wire XLXN_78;
+   wire XLXN_79;
+   wire XLXN_80;
+   wire XLXN_81;
+   
+   symbolFA32_MUSER_lab2soru1genel  XLXI_1 (.A(A0), 
+                                           .B(XLXN_2), 
+                                           .Cin(ADDSUB), 
+                                           .C(XLXN_67), 
+                                           .S(C0));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_2 (.A(A1), 
+                                           .B(XLXN_3), 
+                                           .Cin(XLXN_67), 
+                                           .C(XLXN_70), 
+                                           .S(C1));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_3 (.A(A2), 
+                                           .B(XLXN_4), 
+                                           .Cin(XLXN_70), 
+                                           .C(XLXN_71), 
+                                           .S(C2));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_4 (.A(A3), 
+                                           .B(XLXN_5), 
+                                           .Cin(XLXN_71), 
+                                           .C(XLXN_72), 
+                                           .S(C3));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_5 (.A(A4), 
+                                           .B(XLXN_6), 
+                                           .Cin(XLXN_72), 
+                                           .C(XLXN_73), 
+                                           .S(C4));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_6 (.A(A5), 
+                                           .B(XLXN_7), 
+                                           .Cin(XLXN_73), 
+                                           .C(XLXN_33), 
+                                           .S(C5));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_7 (.A(A6), 
+                                           .B(XLXN_8), 
+                                           .Cin(XLXN_33), 
+                                           .C(XLXN_75), 
+                                           .S(C6));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_8 (.A(A8), 
+                                           .B(XLXN_15), 
+                                           .Cin(XLXN_76), 
+                                           .C(XLXN_77), 
+                                           .S(C8));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_9 (.A(A7), 
+                                           .B(XLXN_16), 
+                                           .Cin(XLXN_75), 
+                                           .C(XLXN_76), 
+                                           .S(C7));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_10 (.A(A9), 
+                                            .B(XLXN_14), 
+                                            .Cin(XLXN_77), 
+                                            .C(XLXN_78), 
+                                            .S(C9));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_11 (.A(A10), 
+                                            .B(XLXN_13), 
+                                            .Cin(XLXN_78), 
+                                            .C(XLXN_79), 
+                                            .S(C10));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_12 (.A(A11), 
+                                            .B(XLXN_12), 
+                                            .Cin(XLXN_79), 
+                                            .C(XLXN_80), 
+                                            .S(C11));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_13 (.A(A12), 
+                                            .B(XLXN_11), 
+                                            .Cin(), 
+                                            .C(), 
+                                            .S(C12));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_14 (.A(A13), 
+                                            .B(XLXN_10), 
+                                            .Cin(XLXN_80), 
+                                            .C(XLXN_81), 
+                                            .S(C13));
+   symbolFA32_MUSER_lab2soru1genel  XLXI_15 (.A(A14), 
+                                            .B(XLXN_9), 
+                                            .Cin(XLXN_81), 
+                                            .C(OVF), 
+                                            .S(C14));
+   XOR2  XLXI_16 (.I0(ADDSUB), 
+                 .I1(B0), 
+                 .O(XLXN_2));
+   XOR2  XLXI_17 (.I0(ADDSUB), 
+                 .I1(B1), 
+                 .O(XLXN_3));
+   XOR2  XLXI_18 (.I0(ADDSUB), 
+                 .I1(B2), 
+                 .O(XLXN_4));
+   XOR2  XLXI_19 (.I0(ADDSUB), 
+                 .I1(B3), 
+                 .O(XLXN_5));
+   XOR2  XLXI_20 (.I0(ADDSUB), 
+                 .I1(B4), 
+                 .O(XLXN_6));
+   XOR2  XLXI_21 (.I0(ADDSUB), 
+                 .I1(B5), 
+                 .O(XLXN_7));
+   XOR2  XLXI_22 (.I0(ADDSUB), 
+                 .I1(B6), 
+                 .O(XLXN_8));
+   XOR2  XLXI_23 (.I0(ADDSUB), 
+                 .I1(B14), 
+                 .O(XLXN_9));
+   XOR2  XLXI_24 (.I0(ADDSUB), 
+                 .I1(B13), 
+                 .O(XLXN_10));
+   XOR2  XLXI_25 (.I0(ADDSUB), 
+                 .I1(B12), 
+                 .O(XLXN_11));
+   XOR2  XLXI_26 (.I0(ADDSUB), 
+                 .I1(B11), 
+                 .O(XLXN_12));
+   XOR2  XLXI_27 (.I0(ADDSUB), 
+                 .I1(B10), 
+                 .O(XLXN_13));
+   XOR2  XLXI_28 (.I0(ADDSUB), 
+                 .I1(B9), 
+                 .O(XLXN_14));
+   XOR2  XLXI_29 (.I0(ADDSUB), 
+                 .I1(B8), 
+                 .O(XLXN_15));
+   XOR2  XLXI_30 (.I0(ADDSUB), 
+                 .I1(B7), 
+                 .O(XLXN_16));
+endmodule

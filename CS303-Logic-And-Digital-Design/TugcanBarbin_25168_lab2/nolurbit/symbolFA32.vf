@@ -1,0 +1,54 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : symbolFA32.vf
+// /___/   /\     Timestamp : 12/01/2020 19:54:24
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Xilinx/14.7/ISE_DS/projects/nolurbit/symbolFA32.vf -w C:/Xilinx/14.7/ISE_DS/projects/nolurbit/symbolFA32.sch
+//Design Name: symbolFA32
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module symbolFA32(A, 
+                  B, 
+                  Cin, 
+                  C, 
+                  S);
+
+    input A;
+    input B;
+    input Cin;
+   output C;
+   output S;
+   
+   wire XLXN_1;
+   wire XLXN_5;
+   wire XLXN_6;
+   
+   XOR2  XLXI_1 (.I0(B), 
+                .I1(A), 
+                .O(XLXN_1));
+   XOR2  XLXI_2 (.I0(Cin), 
+                .I1(XLXN_1), 
+                .O(S));
+   AND2  XLXI_3 (.I0(Cin), 
+                .I1(XLXN_1), 
+                .O(XLXN_6));
+   AND2  XLXI_4 (.I0(A), 
+                .I1(B), 
+                .O(XLXN_5));
+   OR2  XLXI_5 (.I0(XLXN_5), 
+               .I1(XLXN_6), 
+               .O(C));
+endmodule

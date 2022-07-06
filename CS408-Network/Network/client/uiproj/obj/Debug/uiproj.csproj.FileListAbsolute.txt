@@ -1,0 +1,27 @@
+c:\users\tuğcan\documents\visual studio 2012\Projects\uiproj\uiproj\bin\Debug\uiproj.exe.config
+c:\users\tuğcan\documents\visual studio 2012\Projects\uiproj\uiproj\bin\Debug\uiproj.exe
+c:\users\tuğcan\documents\visual studio 2012\Projects\uiproj\uiproj\bin\Debug\uiproj.pdb
+c:\users\tuğcan\documents\visual studio 2012\Projects\uiproj\uiproj\obj\Debug\uiproj.csprojResolveAssemblyReference.cache
+c:\users\tuğcan\documents\visual studio 2012\Projects\uiproj\uiproj\obj\Debug\uiproj.Form1.resources
+c:\users\tuğcan\documents\visual studio 2012\Projects\uiproj\uiproj\obj\Debug\uiproj.Properties.Resources.resources
+c:\users\tuğcan\documents\visual studio 2012\Projects\uiproj\uiproj\obj\Debug\uiproj.csproj.GenerateResource.Cache
+c:\users\tuğcan\documents\visual studio 2012\Projects\uiproj\uiproj\obj\Debug\uiproj.exe
+c:\users\tuğcan\documents\visual studio 2012\Projects\uiproj\uiproj\obj\Debug\uiproj.pdb
+E:\Courses\Cs 408\client\uiproj\uiproj\bin\Debug\uiproj.exe.config
+E:\Courses\Cs 408\client\uiproj\uiproj\obj\Debug\uiproj.exe
+E:\Courses\Cs 408\client\uiproj\uiproj\obj\Debug\uiproj.pdb
+E:\Courses\Cs 408\client\uiproj\uiproj\bin\Debug\uiproj.exe
+E:\Courses\Cs 408\client\uiproj\uiproj\bin\Debug\uiproj.pdb
+E:\Courses\Cs 408\client\uiproj\uiproj\obj\Debug\uiproj.csprojResolveAssemblyReference.cache
+E:\Courses\Cs 408\client\uiproj\uiproj\obj\Debug\uiproj.Form1.resources
+E:\Courses\Cs 408\client\uiproj\uiproj\obj\Debug\uiproj.Properties.Resources.resources
+E:\Courses\Cs 408\client\uiproj\uiproj\obj\Debug\uiproj.csproj.GenerateResource.Cache
+C:\Users\Tuğcan\Desktop\cs408proj\uiproj\uiproj\bin\Debug\uiproj.exe.config
+C:\Users\Tuğcan\Desktop\cs408proj\uiproj\uiproj\obj\Debug\uiproj.exe
+C:\Users\Tuğcan\Desktop\cs408proj\uiproj\uiproj\obj\Debug\uiproj.pdb
+C:\Users\Tuğcan\Desktop\cs408proj\uiproj\uiproj\bin\Debug\uiproj.exe
+C:\Users\Tuğcan\Desktop\cs408proj\uiproj\uiproj\bin\Debug\uiproj.pdb
+C:\Users\Tuğcan\Desktop\cs408proj\uiproj\uiproj\obj\Debug\uiproj.csprojResolveAssemblyReference.cache
+C:\Users\Tuğcan\Desktop\cs408proj\uiproj\uiproj\obj\Debug\uiproj.Form1.resources
+C:\Users\Tuğcan\Desktop\cs408proj\uiproj\uiproj\obj\Debug\uiproj.Properties.Resources.resources
+C:\Users\Tuğcan\Desktop\cs408proj\uiproj\uiproj\obj\Debug\uiproj.csproj.GenerateResource.Cache

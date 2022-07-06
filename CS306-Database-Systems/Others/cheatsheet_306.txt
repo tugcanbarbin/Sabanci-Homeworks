@@ -1,0 +1,118 @@
+departmant have one (arrow) manager as employe  // MUST HAVE (BOLD)
+employee ---- manages <====== departmants
+
+weak entity
+relation(ikisini baðlayan mesela çalýþan ve yakýný arasýnda indirim var yakýný bold ve indirim bold) and the entity must be bold if the entity is weak . ve muhtemelen weak entity has 1 to many relation and must 
+for example,    employee ----- //policy// <===== IIdependentsII
+
+cardinality rows
+fields degree
+
+SELECT* -> return which attributes
+FROM table name (short notation)
+WHERE   t.age = 18
+sql will return all the entities with age= 18 with every attributes
+
+DROP TABLE bla bla
+destroys the table
+
+ALTER TABLE bla bla
+ADD COLUMN blabla:type
+table ý deðiþtirebiliriz,
+
+INSERT INTO bbla bla(attributes,att,attri)
+VALUES (tam denk gelen deðerler,ta,tam)
+
+DELETE FROM TABLENAME WHERE T.ATTRIBUTE = BLA BLA
+uyan satýrlarý siler
+
+ON DELETE CASCADE -- bu da silinir
+ON DELETE NO ACTION -- does nothing
+ON UPTADE SET DEFAULT -- default value yapar ama eðer yoksa sýkýntý
+
+ssn CHAR(11) NOT NULL -- can not be null
+
+selection(o-) select subset of rows (where renk = black)
+projection(pi) deletes unwanted columns
+crossproduct(x) combines two relations
+set-difference (---) tuples in relation1, but not in relation2
+Union (U) tuples in relation1 and in relation2
+
+p renaming operator
+c(1->sid1,5->sid2) set
+p(C(1->sid1,5->sid2) S1xR1) renames the first column as sid1, and 5th as sid2
+
+
+R /butterfly/ cS
+theta-join denir. crossproductla ayný iþi yapar ama istenmeyenleri çýkarýr
+==== o-c(RxS)
+like s1 /butterfly/ s1.sid <r1.sid R1
+same 
+o- s1.sid<r1.sid(S1xR2)
+
+
+EQUÝ JOÝN:
+S1 /butterfly(|x|)/sid R1
+sid means if they are equal
+
+
+DÝVÝSÝON
+A/B
+A' da B nin tamamýný kapsayanlar
+
+PÝsname((O-bid=103 Reserves) butterfly Sailors)
+all the names that has boat with bid 103 in reserves tables
+ 
+
+week3 recit kesin izle
+
+
+SELECT S.age, age1 = age-5, 2*S.age AS age2 -------- new column age-5 as age1 and 2*S.age as age2
+FROM Sailors S
+WHERE s.sname LIKE 'B_%B    _ means at  1 harf between B    % means start with B and end with B,
+if -% then it means at least 1 character
+
+
+B.color LIKE '%red%'
+EXCEPT
+B.color LIKE '%green%'
+
+içinde red geçen ama green geçmeyenler
+
+
+NOT IN / NOT EXIST same job but
+different
+not in starts form inner query which is right side
+not exist starts from outer query which is on the left
+
+
+ 
+SELECT * FROM employe INNER JOÝN departmants on  employee.did = departmant.did
+
+iki did de çýkar
+
+SELECT * FROM eploye NATURAL JOÝN departmant 
+same as innerjoin but only checks matching fields and just 1 did.
+
+SELECT * FROM EMPLOYEE CROSS JOÝN DEPARTMANT just crossproduct everything
+
+SELECT * FROM employee LEFT OUTER JOIN departmant ON department.DID = employee.DID
+sol taraf tamamen varken
+sað tarafta sadece matchingler var
+tersi de tam tersi
+
+
+
+SELECT COUNT(*) FROM SAILORS 
+
+SELECT AVG(s.age) FROM SAILORS  S WHERE S.rating = 10;
+
+SELECT AVG(DISTINCT S.age)
+
+
+SELECT S.name FROM Sailors S WHERE S.rating  = (SELECT MAX(S2.rating) FROM Sailors S2)
+sailorstaki max ratinge eþit olan kiþilerin adlarý
+
+
+SELECT COUNT( DISTINCT S.rating) FROM Sailors S
+

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Xilinx/TugcanBarbin_25168_lab2/RPAdeneme2/RCA3.xst" -ofn "C:/Xilinx/TugcanBarbin_25168_lab2/RPAdeneme2/RCA3.syr" 

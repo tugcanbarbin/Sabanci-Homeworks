@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Xilinx/14.7/ISE_DS/projects/nolurbit/asdasd_asdasd_sch_tb_isim_beh.exe" -prj "C:/Xilinx/14.7/ISE_DS/projects/nolurbit/asdasd_asdasd_sch_tb_beh.prj" "work.asdasd_asdasd_sch_tb" "work.glbl" 

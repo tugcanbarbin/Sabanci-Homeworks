@@ -1,0 +1,344 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml asdasd.twx asdasd.ncd -o asdasd.twr asdasd.pcf
+
+Design file:              asdasd.ncd
+Physical constraint file: asdasd.pcf
+Device,package,speed:     xc3s100e,tq144,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A0             |C0             |    6.621|
+A0             |C1             |    7.417|
+A0             |C2             |    9.996|
+A0             |C3             |   10.719|
+A0             |C4             |   12.199|
+A0             |C5             |   12.729|
+A0             |C6             |   14.642|
+A0             |C7             |   16.593|
+A0             |C8             |   16.675|
+A0             |C9             |   17.523|
+A0             |C10            |   19.196|
+A0             |C11            |   20.197|
+A0             |C12            |   20.947|
+A0             |C13            |   22.802|
+A0             |C14            |   23.226|
+A0             |OVF            |   23.164|
+A1             |C1             |    6.782|
+A1             |C2             |   10.505|
+A1             |C3             |   11.228|
+A1             |C4             |   12.708|
+A1             |C5             |   13.238|
+A1             |C6             |   15.151|
+A1             |C7             |   17.102|
+A1             |C8             |   17.184|
+A1             |C9             |   18.032|
+A1             |C10            |   19.705|
+A1             |C11            |   20.706|
+A1             |C12            |   21.456|
+A1             |C13            |   23.311|
+A1             |C14            |   23.735|
+A1             |OVF            |   23.673|
+A2             |C2             |    8.082|
+A2             |C3             |    9.522|
+A2             |C4             |   11.002|
+A2             |C5             |   11.532|
+A2             |C6             |   13.445|
+A2             |C7             |   15.396|
+A2             |C8             |   15.478|
+A2             |C9             |   16.326|
+A2             |C10            |   17.999|
+A2             |C11            |   19.000|
+A2             |C12            |   19.750|
+A2             |C13            |   21.605|
+A2             |C14            |   22.029|
+A2             |OVF            |   21.967|
+A3             |C3             |    6.922|
+A3             |C4             |    8.749|
+A3             |C5             |    9.279|
+A3             |C6             |   11.192|
+A3             |C7             |   13.143|
+A3             |C8             |   13.225|
+A3             |C9             |   14.073|
+A3             |C10            |   15.746|
+A3             |C11            |   16.747|
+A3             |C12            |   17.497|
+A3             |C13            |   19.352|
+A3             |C14            |   19.776|
+A3             |OVF            |   19.714|
+A4             |C4             |    8.509|
+A4             |C5             |   10.463|
+A4             |C6             |   12.376|
+A4             |C7             |   14.327|
+A4             |C8             |   14.409|
+A4             |C9             |   15.257|
+A4             |C10            |   16.930|
+A4             |C11            |   17.931|
+A4             |C12            |   18.681|
+A4             |C13            |   20.536|
+A4             |C14            |   20.960|
+A4             |OVF            |   20.898|
+A5             |C5             |    6.283|
+A5             |C6             |    8.509|
+A5             |C7             |   10.460|
+A5             |C8             |   10.542|
+A5             |C9             |   11.390|
+A5             |C10            |   13.063|
+A5             |C11            |   14.064|
+A5             |C12            |   14.814|
+A5             |C13            |   16.669|
+A5             |C14            |   17.093|
+A5             |OVF            |   17.031|
+A6             |C6             |    6.221|
+A6             |C7             |   10.800|
+A6             |C8             |   10.882|
+A6             |C9             |   11.730|
+A6             |C10            |   13.403|
+A6             |C11            |   14.404|
+A6             |C12            |   15.154|
+A6             |C13            |   17.009|
+A6             |C14            |   17.433|
+A6             |OVF            |   17.371|
+A7             |C7             |    7.670|
+A7             |C8             |    8.644|
+A7             |C9             |    9.492|
+A7             |C10            |   11.165|
+A7             |C11            |   12.166|
+A7             |C12            |   12.916|
+A7             |C13            |   14.771|
+A7             |C14            |   15.195|
+A7             |OVF            |   15.133|
+A8             |C8             |    6.630|
+A8             |C9             |    8.634|
+A8             |C10            |   10.307|
+A8             |C11            |   11.308|
+A8             |C12            |   12.058|
+A8             |C13            |   13.913|
+A8             |C14            |   14.337|
+A8             |OVF            |   14.275|
+A9             |C9             |    6.211|
+A9             |C10            |    8.694|
+A9             |C11            |    9.695|
+A9             |C12            |   10.445|
+A9             |C13            |   12.300|
+A9             |C14            |   12.724|
+A9             |OVF            |   12.662|
+A10            |C10            |    7.416|
+A10            |C11            |    9.675|
+A10            |C12            |   10.425|
+A10            |C13            |   12.280|
+A10            |C14            |   12.704|
+A10            |OVF            |   12.642|
+A11            |C11            |    7.702|
+A11            |C12            |    8.836|
+A11            |C13            |   10.691|
+A11            |C14            |   11.115|
+A11            |OVF            |   11.053|
+A12            |C12            |    7.870|
+A12            |C13            |   10.279|
+A12            |C14            |   10.703|
+A12            |OVF            |   10.641|
+A13            |C13            |    7.047|
+A13            |C14            |    7.061|
+A13            |OVF            |    7.408|
+A14            |C14            |    8.496|
+A14            |OVF            |    7.252|
+ADDSUB         |C1             |    7.964|
+ADDSUB         |C2             |   10.543|
+ADDSUB         |C3             |   11.266|
+ADDSUB         |C4             |   12.746|
+ADDSUB         |C5             |   13.276|
+ADDSUB         |C6             |   15.189|
+ADDSUB         |C7             |   17.140|
+ADDSUB         |C8             |   17.222|
+ADDSUB         |C9             |   18.070|
+ADDSUB         |C10            |   19.743|
+ADDSUB         |C11            |   20.744|
+ADDSUB         |C12            |   21.494|
+ADDSUB         |C13            |   23.349|
+ADDSUB         |C14            |   23.773|
+ADDSUB         |OVF            |   23.711|
+B0             |C0             |    6.919|
+B0             |C1             |    7.426|
+B0             |C2             |   10.005|
+B0             |C3             |   10.728|
+B0             |C4             |   12.208|
+B0             |C5             |   12.738|
+B0             |C6             |   14.651|
+B0             |C7             |   16.602|
+B0             |C8             |   16.684|
+B0             |C9             |   17.532|
+B0             |C10            |   19.205|
+B0             |C11            |   20.206|
+B0             |C12            |   20.956|
+B0             |C13            |   22.811|
+B0             |C14            |   23.235|
+B0             |OVF            |   23.173|
+B1             |C1             |    6.896|
+B1             |C2             |   10.279|
+B1             |C3             |   11.002|
+B1             |C4             |   12.482|
+B1             |C5             |   13.012|
+B1             |C6             |   14.925|
+B1             |C7             |   16.876|
+B1             |C8             |   16.958|
+B1             |C9             |   17.806|
+B1             |C10            |   19.479|
+B1             |C11            |   20.480|
+B1             |C12            |   21.230|
+B1             |C13            |   23.085|
+B1             |C14            |   23.509|
+B1             |OVF            |   23.447|
+B2             |C2             |    7.849|
+B2             |C3             |   10.117|
+B2             |C4             |   11.597|
+B2             |C5             |   12.127|
+B2             |C6             |   14.040|
+B2             |C7             |   15.991|
+B2             |C8             |   16.073|
+B2             |C9             |   16.921|
+B2             |C10            |   18.594|
+B2             |C11            |   19.595|
+B2             |C12            |   20.345|
+B2             |C13            |   22.200|
+B2             |C14            |   22.624|
+B2             |OVF            |   22.562|
+B3             |C3             |    7.378|
+B3             |C4             |    8.952|
+B3             |C5             |    9.482|
+B3             |C6             |   11.395|
+B3             |C7             |   13.346|
+B3             |C8             |   13.428|
+B3             |C9             |   14.276|
+B3             |C10            |   15.949|
+B3             |C11            |   16.950|
+B3             |C12            |   17.700|
+B3             |C13            |   19.555|
+B3             |C14            |   19.979|
+B3             |OVF            |   19.917|
+B4             |C4             |    7.892|
+B4             |C5             |    9.993|
+B4             |C6             |   11.906|
+B4             |C7             |   13.857|
+B4             |C8             |   13.939|
+B4             |C9             |   14.787|
+B4             |C10            |   16.460|
+B4             |C11            |   17.461|
+B4             |C12            |   18.211|
+B4             |C13            |   20.066|
+B4             |C14            |   20.490|
+B4             |OVF            |   20.428|
+B5             |C5             |    7.118|
+B5             |C6             |    9.723|
+B5             |C7             |   11.674|
+B5             |C8             |   11.756|
+B5             |C9             |   12.604|
+B5             |C10            |   14.277|
+B5             |C11            |   15.278|
+B5             |C12            |   16.028|
+B5             |C13            |   17.883|
+B5             |C14            |   18.307|
+B5             |OVF            |   18.245|
+B6             |C6             |    6.963|
+B6             |C7             |   11.284|
+B6             |C8             |   11.366|
+B6             |C9             |   12.214|
+B6             |C10            |   13.887|
+B6             |C11            |   14.888|
+B6             |C12            |   15.638|
+B6             |C13            |   17.493|
+B6             |C14            |   17.917|
+B6             |OVF            |   17.855|
+B7             |C7             |    7.067|
+B7             |C8             |    8.236|
+B7             |C9             |    9.084|
+B7             |C10            |   10.757|
+B7             |C11            |   11.758|
+B7             |C12            |   12.508|
+B7             |C13            |   14.363|
+B7             |C14            |   14.787|
+B7             |OVF            |   14.725|
+B8             |C8             |    7.093|
+B8             |C9             |    9.155|
+B8             |C10            |   10.828|
+B8             |C11            |   11.829|
+B8             |C12            |   12.579|
+B8             |C13            |   14.434|
+B8             |C14            |   14.858|
+B8             |OVF            |   14.796|
+B9             |C9             |    6.484|
+B9             |C10            |    9.023|
+B9             |C11            |   10.024|
+B9             |C12            |   10.774|
+B9             |C13            |   12.629|
+B9             |C14            |   13.053|
+B9             |OVF            |   12.991|
+B10            |C10            |    6.772|
+B10            |C11            |    9.754|
+B10            |C12            |   10.504|
+B10            |C13            |   12.359|
+B10            |C14            |   12.783|
+B10            |OVF            |   12.721|
+B11            |C11            |    7.114|
+B11            |C12            |    8.836|
+B11            |C13            |   10.691|
+B11            |C14            |   11.115|
+B11            |OVF            |   11.053|
+B12            |C12            |    7.534|
+B12            |C13            |   10.317|
+B12            |C14            |   10.741|
+B12            |OVF            |   10.679|
+B13            |C13            |    7.749|
+B13            |C14            |    9.023|
+B13            |OVF            |    8.116|
+B14            |C14            |    8.367|
+B14            |OVF            |    7.861|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Dec 02 02:29:08 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4504 MB
+
+
+

@@ -1,0 +1,80 @@
+ISim log file
+Running: C:\Xilinx\TugcanBarbin_25168_lab2\CLAlab2\CLAsche_CLAsche_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Xilinx/TugcanBarbin_25168_lab2/CLAlab2/CLAsche_CLAsche_sch_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Addition -- Testcase:          0
+Addition result is correct!  3521 ==  3521
+Overflow result is correct! 0 == 0
+
+Addition -- Testcase:          1
+Addition result is correct!  2735 ==  2735
+Overflow result is wrong! 0 != 1
+
+Addition -- Testcase:          2
+Addition result is correct! 29601 == 29601
+Overflow result is correct! 0 == 0
+
+Addition -- Testcase:          3
+Addition result is correct!  1537 ==  1537
+Overflow result is wrong! 0 != 1
+
+Addition -- Testcase:          4
+Addition result is correct! 26989 == 26989
+Overflow result is correct! 0 == 0
+
+Addition -- Testcase:          5
+Addition result is correct! 18861 == 18861
+Overflow result is wrong! 0 != 1
+
+Addition -- Testcase:          6
+Addition result is correct! 17312 == 17312
+Overflow result is wrong! 1 != 0
+
+Addition -- Testcase:          7
+Addition result is correct! 16051 == 16051
+Overflow result is correct! 1 == 1
+
+Subtraction -- Testcase:          8
+Subtraction result is correct!  5500 ==  5500
+Overflow result is wrong! 0 != 1
+
+Subtraction -- Testcase:          9
+Subtraction result is correct! 24020 == 24020
+Overflow result is correct! 0 == 0
+
+Subtraction -- Testcase:         10
+Subtraction result is correct!  6642 ==  6642
+Overflow result is correct! 0 == 0
+
+Subtraction -- Testcase:         11
+Subtraction result is correct! 18715 == 18715
+Overflow result is wrong! 0 != 1
+
+Subtraction -- Testcase:         12
+Subtraction result is correct!  3602 ==  3602
+Overflow result is wrong! 0 != 1
+
+Subtraction -- Testcase:         13
+Subtraction result is correct! 24124 == 24124
+Overflow result is correct! 0 == 0
+
+Subtraction -- Testcase:         14
+Subtraction result is correct! 24221 == 24221
+Overflow result is wrong! 1 != 0
+
+Subtraction -- Testcase:         15
+Subtraction result is correct! 10962 == 10962
+Overflow result is correct! 1 == 1
+
+Your simulation grade is          30 out of          36!
+
+Stopped at time : 281 ns : File "C:/Xilinx/TugcanBarbin_25168_lab2/CLAlab2/CLATEST.v" Line 275

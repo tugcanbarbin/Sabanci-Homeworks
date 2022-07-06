@@ -1,0 +1,22 @@
+dfs(vertex)
+{
+	process
+	add to preorder list
+	mark as visited
+	for neighbours of v
+		if neighbours are not visited
+			dfs(neighbours)
+	add to postorder list
+}
+
+/////////////breadth first search tree
+level level gitmece
+
+preorder
+queue 
+mantığı
+
+/////////7max edge
+max edge = v*v-1/2
+not isolated min edge = v/2
+connected min v-1

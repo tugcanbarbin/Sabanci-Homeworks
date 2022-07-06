@@ -1,0 +1,18 @@
+
+1-) Differences between RCA and CLA in terms of synthesis and implementation is smaller than the previous lab.
+CLA
+27,949 ns
+LUTs 47
+
+RCA
+28,977ns
+LUTs 40
+2-)
+RCA is better in terms of size with 40 to 47
+3-) 
+CLA is better in terms of time with 27,949 ns to 28,977
+4-)
+For RCA, 28.977 * 40 = 1159,08
+for CLA, 27.949 * 47 = 1313,603
+for both measure, smaller is better. So, the new metric that we created is better if smaller.
+So, RCA is better.

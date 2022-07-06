@@ -1,0 +1,74 @@
+because of the structure property logN height
+
+////////////find kth largest number in 1billion number
+max heap ==
+-first create a min heap with first k number
+-for each remaining number, if selected number is bigger than min number which is in our minheap, insert it in the min heap and then delete the minimum value from heap
+-the minheap contains the largest k numbers in an array
+O(n log K)  n kere O(log K) sort işlemi yappılıyor 
+
+////////////////how to build a minheap for a given array
+////////////////min heap insertion
+template <class Comparable>
+	class BinaryHeap
+{
+public:
+	BinaryHeap(int capacity =100);
+	bool isEmpty() const;
+	bool isFull() const;
+	const Comparable & findMin() const;
+	void insert(const Comparable & x);
+	void deleteMin();
+	void deleteMin(Comparable & minItem);
+	void makeEmpty();
+private:
+	int currentSize;
+	vector <Comparable> array;
+	void buildHeap();
+	void percolateDown(int hole);
+}
+
+////INSERT
+store the value in last leaf node than percolate up
+
+void BinaryHeap<> :: insert (const Comparable & x) ///////////////O(LOGN)
+{
+	if(isFull())
+		throw Overflow();
+	int hole == ++currentSize;
+	for(;hole>1 && x<array[hole/2]; hole/=2)
+		array[hole] = array[hole/2];
+	array[hole]=x;
+}
+////DELETE
+Change the root with the last element in leaf then delete then percolate down the root 
+void BinaryHeap <Comparable>:: percolateDown(int hole)
+{ ///////////////////////////////////////////////////////////////	O(LOGN)
+	int child;
+	Comparable tmp = array[hole];
+	for(;hole*2 <= currentSize; hole = child)
+	{
+		child = hole*2;
+		if(child!= currentSize && array[child+1] < array[child])
+			child++;
+		if(array[child]< tmp)
+			array[hole] = array[child];
+		else
+			break;
+	}	
+}
+
+////////////////////////////////////BUİLD HEAP
+void BinaryHeap<Comparable>:: buildHeap(vector <Comparable> input) /////// build heap O(N)
+{
+	array= input;
+	currentSize = input.size();
+	for(int i = currentSize / 2; i >0; i--)
+	{
+		percolateDown(i);
+	}
+}
+
+////HEAP SORT 
+BUİLD HEAP O(N) THEN PERFORM N DELETE OPERATİONS TO SORT O(LOGN)  SOOO O(NLOGN)
+///ALGORİTHM 1  	O(N) +O(K LogN)

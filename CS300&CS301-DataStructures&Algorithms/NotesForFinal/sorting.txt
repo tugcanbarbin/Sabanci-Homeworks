@@ -1,0 +1,82 @@
+/////////////////////2gb file one string per line which algorithm to sort and why
+MERGE SORT BECAUSE we need to split data because we can not bring the all data so we need to mergesort them. NlogN
+////////////////////FİND THE ELEMENT İN MATRİX
+row başına binary search yap yani (row * log column)
+
+INSERTion SORT
+void insertionSort(vector <Comparable> % a) /////// O(N^2) best case if array sorted O(n)
+{
+	int j;
+	for(int p =1; p<a.size();p++)
+	{
+		comparable tmp = a[p];
+		for(j=p; j>0 && tmp < a[j-1];j--)
+			a[j] = a[j-1]
+		a[j] = tmp;
+	}
+}
+SHELLSORT sequence of increments 1,3,7, 2^k -... O(N^3/2)
+
+
+void shellsort(vector<comparable> & a) // worst case is O(N^2) since insertion sort is used 
+{
+	int j;
+	for(int gap = a.size()/2; gap>0; gap/=2)
+	{
+		comparable tmp = a[i];
+		for(j=i; j>= gap && tmp <a[j-gap]; j-= gap)
+			a[j]=a[j-gap];
+		a[j] = temp;
+	}
+}
+
+//////////////////heapsort but mesela max heap yapıyosun baştaki elemanı sona alıyosun sonra n-1 için tekrar sonra n-2 için tekrar böylece küçükten büyüğe (memory efficient but same complexity)
+void heapsort(vector <comparable> &a)
+{
+	for(int i = a.size()/2; i>= 0; i--) // build heap 
+		percDown(a,i,a.size());
+	for(int j = a.size()-1; j>0;j--)
+	{
+		swap(a[0],a[j]);
+		percDown(a,0,j);
+	}
+}
+
+//////MERGE SORT O(NlogN)
+DİVİDE RİGHT İN THE MİDDLE THEN SORT FİRST AND SECOND PART RECURSİVELY AND MERGE
+MERGİNG OPERATİON:
+void mergeSort(vector <comparable> & a)
+{
+	vector<Comparable> tmpArray(a.size());
+(private version)	mergeSort(a,tmpArray,0,a.size()-1);
+}
+void mergeSort(vector<comparable> &a, vector<comparable> &tmpArray, int left, int right)
+{
+	if(left<right)
+	{
+		int center = (left+right)/2;
+		mergeSort(a,tmpArray,left,center);
+		mergeSort(a,tmpArray,center+1, right);
+		merge(a,tmpArray,left,center+1,right);
+	}
+}
+void merge(vector <> &a, vector<> &tmparray,int leftpos,int rightpos, int rightend);
+{
+	int leftEnd = rightpos-1;
+	int tmpPos = leftPos;
+	int numElements = rightEnd-leftPos+1;
+	while(leftPos <= leftEnd && rightpos <= rightend)
+	{
+		if(a[leftpos] <= a[rightpos])
+			tmpArray[tmpPos++] = a[leftPos++];
+		else
+			tmpArray[tmpPos++] = a[rightPos++];
+	}
+	while(leftPos <= leftEnd)
+		tmpArray[tmpPos++] = a[leftPos++];
+	while(rightpos <= rightend)
+		tmpArray[tmpPos++] = a[rightPos++];
+
+	for(int i = 0; i < numElements, i++, rightEnd--)
+		a[rightEnd] = tmpArray[rightEnd];
+}

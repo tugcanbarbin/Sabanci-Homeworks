@@ -1,0 +1,81 @@
+digital signitures: 
+digital signitures uses cryptography. It trying to implement something like a person is signing a letter or document in physical world. It is significant because in this way we can prove that we are the one who write or sent the original message and the message is original, no one changed it on the way like third parties. It makes sure that sender is original and data entegrity is preserved. 
+
+We use RSA which is specific algorithm for public key algorithm. It allows us to encrpyt with private key and decrypt with public key. Fırstly, we hash the original message and map the fix size message into bits. Then, sender can use private key to encrypt this hashed message. And this result will be appended at the end of message. 
+
+Then receiver can decpryts the hashed message with the private key and compare. If message is altered, hash value of altered message will not match with the decrpyted and appended token. With this way we can be sure that message is not altered by any third parties.
+
+This is how the digital signiture is done.
+
+
+ Buffer overflow Attack: It is a common and wellknown attack but it can stilll happen in these days. When a function called, we push a stack frame into the stack, which have local variables and we push return address. Return address must used after a is finished. Buffer overflow happens when function takes an input in the format of string. Buffer is fixed size and given user input can be bigger than buffer size. Buffer will overflow and it may overwrite the return address. So, some skilled crackers can implement some input string in such a way that return address is overwritten and it points to the beginning of the buffer. After function finishes itself, program counter will be initialized as return address which is beginning of the buffer. And in the buffer cracker can implement some codes like assembly which can be very harmfull.
+So, when function return contents of buffer can start running and harm our system. 
+Solution can be taking fixed size input which will not cause overflow or allocate buffer on the heap. With these ways we can avoid such a problem like this.
+
+Covert Channels: These channels can be used to transfer some information without anyone detecting this transformation. Everything can be implemented securely but still information can be leaked. Because when a file opening or closing some bits must change and observers can understand this with observing these bits.
+
+Another way is locking and unlocking. Server can lock and unlock a file while using and this will lead to some operations in background which can be observed by third parties.
+
+Another one is done through images. Each image contains some pixel in terms of their resolution and they are represented with rgb 3 byte values. Third parties can change least significant bit and it will not be visible because it is not crucial. Some data can be stored in these bits like picture 2. 
+
+So, with these ways information can be leaked without anyone noticed.
+-----------------------------------------------------------------------
+IO with interrupt:
+I/O with interrupts are not wasting cpu with constantly checking the devices. The device controller automatically notifies the device manager when it is ready.
+-Devica manager needs driver that initiates the I/o operation
+-its status table
+-interrupt handler for specific device
+-device handler
+2-)when interrupt comes from devices are handled by interrupt controller. It notifies cpu and cpu recieves it.
+-)For example in a read operation
+-)driver checks the status register of the device if it is idle or not, if it is busy, driver waits until device become idle
+-)in device status table we can have multiple devices, for each device we need an entry
+-)device manager invokes the scheduler so it can pick another process
+3-) when operation is completed, interruption is sent to cpu and interruption handler needs to run
+ which determines to which device caused the interrupt and it needs to jump to specific device handler
+-) device handler retrieves i/o status information to check then copies of the contents of the controller's data registers into the user process's space
+then device handler returns control to the application so i/o is finished
+IO with DMA:
+In the case of io with interrupts, the data transfer is done by the cpu. In this I/O operation, transfer is done by a specific device which is called direct memory access controller. It has a connection to the bus and seperated from cpu.
+It also has registers like address which contains where we need to transfer and count which represent how many bytes
+data is transferred from registers to main memory thorugh the bus.
+
+Raid disks:
+Raid is set of disks which can act like a single disk to have a better capacity with less price. Also it can allow us to have less error chance. It appears as single disk in operating system. 
+There are levels in raid and in level 0 there is data striping which means dividing whole data storage to data sectors in round robin fashion. in level 0 we dont have any redundant storage
+If we read larger chunks, since the data distributed to different disks, we do parralel reading but in case of smaller chunks it is not possible. so if we request one sector at a time we can not gain any performance 
+also if one of the system fails, all system will fail. So in terms of reliability raid level0 is very bad, so it is not a good approach but in terms of performance it is much better than single disks.
+
+for raid level 1, for example if we have 4 disks we also need 4 disks too for backup. So , write operation is done twice but this does not decrease performance since it is parallel writing operation. Read performance is much better because we have alternative to read. Parallel reads can be done for example, read strip 0 from left and read strip 1 from right. 
+In case of raid level1 if some disk fails we can replace it with copy so it will not crush whole system. Whole system can fail if original and backup disk fails but its probability is very low compared to failure of single disk. So reliability is very good in case of level 1.
+
+in case of level2 we have very small sized stripes. It has hamming code for error detection and correction with parity bits. It needs to be synchronized when reading and writing because when we are reading bits are distributed.
+Level 3 is simplified version of level 2 which has only checksum. With checksum we can detect error but there is no error correction. If one disk crash, we can check the parity disk and detect the error and correct it.
+for level4 we have again striping but we dont have bit level but we have like sector level striping and we have parity disk for error detection
+
+stable storage:
+In case of raid storage we can understand the problems in data and correct them, also it has tolarence against crashes.
+In stable  storage we have atomicity protocole which represents that when a writing operation is going on it must fully written or write nothing at all. So, if system crashes at the middle of writing operation. disk will recover it so half part which is written is deleted, recovered. It is called desired property.
+
+Stable storage can handle:
+- if written sector suddenly becomes unreadable or cpu fail leading to incorrect data we can recover it
+can not handle:
+- but if some big problem occurs in hardware level we can not handle it.
+ 
+In stable storage we have 2 drives which are identical, with this property we can manage the atomicity.
+-first we write on drive 1
+-then read it and verify it, if it is not correct repeat the writing and correction part.
+-if some consecutive failures we remap to spare one and continue
+-if succeeds, corresponding block on drive 2 will be written with same thing with drive1 and reading and verifying process again continues for drive2
+- after these operations block is successfully written in both drives.
+
+for reading
+-we first read drive 1
+-if an error occurs then we re-read 
+- after a number of iterations and errors we can read it from drive 2
+probability of crash of same block on both drives is very low so we assume that it is zero, it will not happen.
+
+for the recovery
+- we scan both disk to see any error
+-if an error is detected then good drive will be used for write to bad one.
+-but if both drive is good but the data in same block is different, then we write drive 1 to drive 2.

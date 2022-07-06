@@ -1,0 +1,29 @@
+Command line:
+   asdasd_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  5556
+
+Wed Dec 02 01:29:08 2020
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5150.52 Meg
+
+ Total Signals          : 479
+ Total Nets             : 134
+ Total Signal Drivers   : 95
+ Total Blocks           : 107
+ Total Primitive Blocks : 91
+ Total Processes        : 96
+ Total Traceable Variables  : 18
+ Total Scalar Nets and Variables : 214
+Total Line Count : 14
+
+ Total Simulation Time: 0.125 sec
+
+ Current Memory Usage: 4993.23 Meg
+
+Wed Dec 02 01:32:21 2020
+

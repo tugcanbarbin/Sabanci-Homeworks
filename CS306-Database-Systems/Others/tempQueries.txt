@@ -1,0 +1,106 @@
+CREATE TABLE shopping_history(
+	
+	account_id INTEGER,
+	
+	ticket_id INTEGER NOT NULL,
+	purchase_date DATE NOT NULL,
+	ticeket_seat_no INTEGER NOT NULL,
+	company_name VARCHAR(20),
+	ticket_price FLOAT NOT NULL,
+	ticket_from VARCHAR(30) NOT NULL,
+	ticket_to VARCHAR(30) NOT NULL,
+	ticket_date DATE NOT NULL,
+	
+	FOREIGN KEY(account_id) REFERENCES account,
+	FOREIGN KEY(ticket_id) REFERENCES ticket,
+	FOREIGN KEY(purchase_date) REFERENCES account
+	
+	ON DELETE CASCADE
+);
+
+
+
+CREATE TABLE points_of_interest(
+	
+	ticket_id INTEGER NOT NULL,
+	place_to_visit VARCHAR(30), ("Tour Guide","small tour in transfer city", NULL)
+	place_to_eat VARCHAR(30),   ("inflight service", "restauran ticket", "fastfood ticket" , NULL)
+	place_to_stay VARCHAR(30),  ("contracted hotel 1 night","contracted hotel 2 night", NULL)
+	transportation_easiness VARCHAR(30),("service in city","baggage handling", NULL)
+	
+	FOREIGN KEY(ticket_id) REFERENCES ticket(ticket_id) ON DELETE CASCADE
+);
+INSERT INTO campaign(campaign_id, company_id, percentage)
+VALUES (0, 0, 20), (1, 1, 25), (2, 2,  15), (3, 8, 20), (4, 5, 5),
+	(5, 6, 50), (6, 7, 20), (7, 3, 10), (8, 9, 15), (9, 4, 3)
+INSERT INTO company(company_id, company_name)
+VALUES(0, 'Turkish Airlines'), (1, 'Pegasus'), (2, 'Frontier'), (3, 'Onurair'),
+	(4, 'Emirates'), (5, 'United Airlines'), (6, 'Anadolu Jet'),
+	(7, 'Qatar Airways'), (8, 'United Airlines'), (9, 'American Airlines');
+
+
+
+INSERT INTO points_of_interest(ticket_id, place_to_visit, place_to_eat, place_to_stay,transportation_easiness)
+VALUES (0, "Tour Guide", "inflight service", "contracted hotel 1 night","baggage handling"),
+(1,"small tour in transfer city",NULL,"contracted hotel 1 night",NULL),
+(2,"small tour in transfer city", NULL, "contracted hotel 2 night","baggage handling"), 
+(3, "small tour in transfer city", NULL,"baggage handling"), 
+(4, "Tour Guide", "fastfood ticket", "contracted hotel 1 night","baggage handling"),
+(5, NULL, "fastfood ticket",NULL,"baggage handling"),
+(6,"Tour Guide", "fastfood ticket", NULL,NULL),
+(7, NULL, "fastfood ticket", "contracted hotel 1 night","service in city"),
+(8,NULL, "fastfood ticket","contracted hotel 2 night","service in city"),
+(10, "Tour Guide", NULL, NULL,"service in city"),
+(11, "Tour Guide", "inflight service", NULL, NULL),
+(12, "Tour Guide",  NULL,"contracted hotel 1 night","service in city"),
+(13, "Tour Guide", "inflight service", NULL,"service in city"),
+(14, "Tour Guide", "fastfood ticket", NULL, NULL),
+(15, "Tour Guide", "inflight service", NULL, NULL)
+
+
+
+
+
+
+
+CREATE TABLE date_dif AS
+SELECT 
+	account.mail,
+    account.account_id,
+    ticket.flight_time,
+    buy.purchase_date
+FROM 
+	account
+JOIN buy ON buy.account_id = account.account_id
+JOIN ticket ON ticket.ticket_id = buy.ticket_id;
+
+
+ALTER TABLE date_dif 
+ADD date_diff INTEGER;
+
+
+ALTER TABLE `date_dif` CHANGE `flight_time` `flight_time` VARCHAR(30) NULL DEFAULT NULL;
+ALTER TABLE `date_dif` CHANGE `purchase_date` `purchase_date` VARCHAR(30) NULL DEFAULT NULL;
+
+UPDATE date_dif
+SET date_diff = DATEDIFF(flight_time,purchase_date);
+
+
+SELECT 
+	account.account_id,
+    account.mail,
+    shopping_history.company_name,
+    shopping_history.ticket_from,
+    shopping_history.ticket_to,
+    ticket.flight_time
+FROM 
+	account
+JOIN shopping_history ON account.account_id = shopping_history.account_id
+JOIN ticket ON ticket.ticket_id = shopping_history.ticket_id
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+verilog isim_temp "CLA20.v"
+verilog isim_temp "CLA.v"
+verilog isim_temp "testt.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
